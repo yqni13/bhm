@@ -15,6 +15,6 @@ export class HomeComponent implements OnInit {
     // TODO(yqni13): remove when demo no longer used
     ngOnInit() {
         console.log("Navbar routes: ", this.navigation.getNavigationRoutes());
-        console.log("Footer routes: ", this.navigation.getFootertRoutes());
+        console.log("Footer routes: ", this.navigation.getFooterRoutes());
     }
 }

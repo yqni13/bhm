@@ -15,7 +15,7 @@ export class NavigationService {
             .filter((route: any) => route.data?.['location'] === 'navbar');
     }
 
-    getFootertRoutes(): Route[] {
+    getFooterRoutes(): Route[] {
         return this.router.config
             .flatMap((route: any) => [route, ...(route.children || [])])
             .filter((route: any) => route.data?.['location'] === 'footer');
