@@ -1,8 +1,15 @@
 ## 📜 $\textsf{\color{salmon}{List\ of\ updates}}$
 
+### $\textsf{\color{skyblue}2026/07/10}$
+
+$\textsf{[v0.1.0\ =>\ {\textbf{\color{brown}v0.2.3}]}}$ ui<br>
+- $\textsf{\color{teal}Addition:}$ Added basic route structure, route enum, demo components and basic navigation service.
+
+<br>
+
 ### $\textsf{\color{skyblue}2026/07/08}$
 
-$\textsf{[v0.0.1\ =>\ {\textbf{\color{brown}v0.1.0}]}}$ ui<br>
+$\textsf{[v0.0.1\ =>\ v0.1.0]}$ ui<br>
 - $\textsf{\color{teal}Addition:}$ Added environment configuration + replacement scripts for all environments.
 
 <br>
