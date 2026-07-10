@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
     selector: 'app-init',
@@ -8,5 +8,5 @@ import { Component, input } from "@angular/core";
 })
 export class InitComponent {
 
-    title = input.required<string>();
+    protected title = 'Welcome to Init page.';
 }
