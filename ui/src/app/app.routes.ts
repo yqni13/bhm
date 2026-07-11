@@ -11,7 +11,7 @@ export const routes: Routes = [
     {
         // Always navigate to login when authentication fails and load lazily (loadComponent())
         path: BaseRoute.LOGIN,
-        data: { title: 'login', location: 'navbar', icon: 'icon-Login' },
+        data: { title: 'login', location: 'navbar', icon: 'icon-Login', hideNav: true },
         loadComponent: () => import('./components/pages/login/login.component').then(page => page.LoginComponent)
     },
     {

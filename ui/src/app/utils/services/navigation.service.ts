@@ -9,6 +9,11 @@ export class NavigationService {
 
     private readonly router = inject(Router);
 
+    navTo(route: string) {
+        console.log("NavigationService, route: ", route);
+        this.router.navigate([route]);
+    }
+
     getNavigationRoutes(): Route[] {
         return this.router.config
             .flatMap((route: any) => [route, ...(route.children || [])])

@@ -1,0 +1,24 @@
+@if (currentRoute() !== ('/' + BaseRouteEnum.LOGIN)) {
+    <nav class="bhm-nav">
+        <div id="bhm-nav-logo">
+            <img 
+                src="{{logo}}"
+                alt="bhm logo"
+                (click)="navigation.navTo(BaseRouteEnum.HOME)"
+                (keydown)="navigation.navTo(BaseRouteEnum.HOME)"
+                [tabindex]="0"
+            >
+        </div>
+        {{currentRoute()}}
+        <div id="bhm-nav-menu">
+            @for(route of routes(); track $index) {
+                {{route.path}}
+                <a
+                    (click)="navigation.navTo(route.path ?? route?.['data']?.['title'])"
+                    (keydown.enter)="navigation.navTo(route.path ?? route?.['data']?.['title'])"
+                    [tabindex]="0"
+                >{{route?.['data']?.['title']}}</a>
+            }
+        </div>
+    </nav>
+}
