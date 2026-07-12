@@ -4,6 +4,7 @@
 @forward './stylesheets/defines.scss';
 @forward './stylesheets/icons.scss';
 
+
 html {
     scrollbar-width: none;
     scroll-behavior: smooth;
@@ -23,6 +24,11 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 :root {

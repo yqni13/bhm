@@ -5,6 +5,10 @@ import { Injectable } from "@angular/core";
 })
 export class AuthService {
 
+    /**
+     * 
+     * @description Temporary function to simulate authentication.
+     */
     isAuthenticated(): boolean {
         return true;
     }

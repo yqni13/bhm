@@ -10,7 +10,6 @@ export class NavigationService {
     private readonly router = inject(Router);
 
     navTo(route: string) {
-        console.log("NavigationService, route: ", route);
         this.router.navigate([route]);
     }
 

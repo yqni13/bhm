@@ -3,7 +3,6 @@ $device-desktop: 1440px;
 $device-tablet-landscape: 1024px;
 $device-phone-landscape: 768px;
 $device-phone-portrait: 550px;
-$device-small-any: 400px;
 
 
 /* COLOR DEFINITIONS */
@@ -33,12 +32,3 @@ $size25: 25px;
 $size50: 50px;
 $size75: 75px;
 $size100: 100px;
-
-
-/* CUSTOM FONT */
-.font-roboto {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
