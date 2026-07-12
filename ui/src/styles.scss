@@ -1,5 +1,41 @@
+@use './stylesheets/utilities' as util;
+
+@forward './stylesheets/media.scss';
+@forward './stylesheets/defines.scss';
+@forward './stylesheets/icons.scss';
+
+
 html {
     scrollbar-width: none;
-    background-color: rgb(25, 24, 24);
-    font-family: "Optima", sans-serif;
+    scroll-behavior: smooth;
+    cursor: context-menu;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--theme-body-bg);
+    color: var(--theme-body-text);
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+:root {
+    background-color: var(--theme-body-bg);
+}
+
+div,
+section {
+    display: flex;
 }

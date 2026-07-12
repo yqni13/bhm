@@ -1,0 +1,34 @@
+/* CUSTOM DEVICE SIZES */
+$device-desktop: 1440px;
+$device-tablet-landscape: 1024px;
+$device-phone-landscape: 768px;
+$device-phone-portrait: 550px;
+
+
+/* COLOR DEFINITIONS */
+$color-lightmode-bg: #dcdcfa;
+$color-darkmode-bg: #14151a;
+
+$color-lightmode-text: #020d19;
+$color-darkmode-text: #f0f8ff;
+
+$color-lightmode-error: #ee1b1b;
+$color-darkmode-error: #ba3131;
+
+$color-lightmode-success: #0ba56f;
+$color-darkmode-success: #118b17;
+
+$color-lightmode-warning: #f5900c;
+$color-darkmode-warning: #b17a0b;
+
+$color-lightmode-info: #384bfbe6;
+$color-darkmode-info: #235cb1;
+
+
+/* STANDARD PX SIZES */
+$size5: 5px;
+$size15: 15px;
+$size25: 25px;
+$size50: 50px;
+$size75: 75px;
+$size100: 100px;

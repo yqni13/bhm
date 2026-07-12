@@ -1,6 +1,14 @@
 import { Routes } from '@angular/router';
-import { AuthUserGuard } from './utils/guards/auth-user.guard';
+import { authGuard } from './utils/guards/auth.guard';
 import { BaseRoute } from './utils/routes/base.route.enum';
+import { AuthLayoutComponent } from './components/layout/auth/auth.layout.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { MainLayoutComponent } from './components/layout/main/main.layout.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { InitComponent } from './components/pages/init/init.component';
+import { noAuthGuard } from './utils/guards/no-auth.guard';
+import { RoleOption } from './utils/enums/role.enum';
+import { roleGuard } from './utils/guards/role.guard';
 
 export const routes: Routes = [
     {
@@ -9,28 +17,39 @@ export const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        // Always navigate to login when authentication fails and load lazily (loadComponent())
-        path: BaseRoute.LOGIN,
-        data: { title: 'login', location: 'navbar', icon: 'icon-Login' },
-        loadComponent: () => import('./components/pages/login/login.component').then(page => page.LoginComponent)
+        path: '',
+        component: AuthLayoutComponent,
+        canActivate: [ noAuthGuard, roleGuard ],
+        children: [
+            {
+                path: BaseRoute.LOGIN,
+                component: LoginComponent,
+            }
+        ]
     },
     {
-        path: BaseRoute.HOME,
-        loadComponent: () => import('./components/pages/home/home.component').then(page => page.HomeComponent)
-    },
-    {
-        path: BaseRoute.INIT,
-        data: { title: 'init', location: 'footer', icon: 'icon-Init' },
-        canActivate: [AuthUserGuard],
-        loadComponent: () => import('./components/pages/init/init.component').then(page => page.InitComponent)
+        path: '',
+        component: MainLayoutComponent,
+        canActivate: [ authGuard, roleGuard ],
+        children: [
+            {
+                path: BaseRoute.HOME,
+                component: HomeComponent,
+            },
+            {
+                path: BaseRoute.INIT,
+                component: InitComponent,
+                data: { 
+                    title: 'init',
+                    location: 'navbar',
+                    icon: 'icon-Init',
+                    roles: [ RoleOption.ADMIN, RoleOption.USER ]
+                }
+            }
+        ]
     },
     {
         path: '**',
-        redirectTo: BaseRoute.LOGIN
+        redirectTo: BaseRoute.HOME
     }
 ];
-
-/**
- * See more for accessing routes with guards (like children => user, user:id, ...) on documentation:
- * https://angular.dev/guide/routing/route-guards
- */
