@@ -1,0 +1,24 @@
+@use './utilities' as utils;
+
+
+/* prevent printing webpage */
+@media print {
+    html, body {
+        display: none;
+    }
+}
+
+// width > 1440px
+@media screen and (width > utils.$device-desktop) {}
+
+// 1024px > width <= 1440px
+@media screen and (width <= utils.$device-desktop) {}
+
+// 768px > width <= 1024px
+@media screen and (width <= utils.$device-tablet-landscape) {}
+
+// 550px > width <= 768px
+@media screen and (width <= utils.$device-phone-landscape) {}
+
+// 350px > width <= 550px
+@media screen and (width <= utils.$device-phone-portrait) {}

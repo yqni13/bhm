@@ -1,10 +1,12 @@
 {
   "name": "bhm-ui",
-  "version": "0.0.1",
+  "version": "0.3.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "node ./scripts/set-env.dev.ts && ng serve --open",
     "build": "ng build",
+    "build:stag": "node ./scripts/set-env.ts && ng build --configuration staging",
+    "build:prod": "node ./scripts/set-env.ts && ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",

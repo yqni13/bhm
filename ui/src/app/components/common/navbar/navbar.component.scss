@@ -1,0 +1,35 @@
+@use '../../../../stylesheets/utilities' as utils;
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: var(--comp-nav-height);
+    border-bottom: 1px solid red;
+}
+
+.bhm-nav {
+
+    #bhm-nav-logo {
+        margin-left: utils.$size15;
+        img {
+            $size: 30px;
+            width: $size;
+            height: $size;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    #bhm-nav-menu {
+        margin-left: auto;
+        margin-right: utils.$size15;
+        a {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
