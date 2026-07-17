@@ -1,0 +1,27 @@
+<div class="selectinput" ngClass="{{ngClass()}}">
+    <select
+        id="{{'custom-form-' + fieldName()}}"
+        [formField]="field"
+        (change)="selectOption($event)"
+        [ngStyle]="isSelected ? customStyle() : readonlyStyle()"
+    >
+        <option id="option-placeholder" value="" disabled>{{placeholder()}}</option>
+        <hr>
+        @for(option of options() ?? {} | keyvalue; track $index) {
+            <option
+                value="{{option.value}}"
+            >{{option.value}}</option>
+        }
+    </select>
+    @if(field().invalid() && (field().dirty() || field().touched())) {
+        <i
+            id="error-icon"
+            class="icon-base icon-Warning"
+            ngClass="warning-input-text"
+        ></i>
+    }
+</div>
+<app-validation-input
+    [fieldState]="fieldState()"
+    [fieldName]="fieldName()"
+></app-validation-input>

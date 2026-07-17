@@ -1,0 +1,20 @@
+<div class="textinput" ngClass="{{ngClass()}}">
+    <input
+        id="{{'custom-form-' + fieldName()}}"
+        [formField]="field"
+        type="{{inputType()}}"
+        placeholder="{{placeholder()}}"
+        [ngStyle]="customStyle()"
+    >
+    @if(field().invalid() && (field().dirty() || field().touched())) {
+        <i
+            id="error-icon"
+            class="icon-base icon-Warning"
+            ngClass="warning-input-text"
+        ></i>
+    }
+</div>
+<app-validation-input
+    [fieldState]="fieldState()"
+    [fieldName]="fieldName()"
+></app-validation-input>

@@ -1,0 +1,17 @@
+<ng-container>
+    @if(field().invalid() && (field().dirty() || field().touched())) {
+        <div class="validation-errors">
+            @for(validation of validations; track $index) {
+                @if(field().getError(validation.error)) {
+                    <div class="validation-message">
+                        {{
+                            validation.mapping 
+                                ? mapErrorValues(validation.msg, validation.mapping)
+                                : validation.msg
+                        }}
+                    </div>
+                }
+            }
+        </div>
+    }
+</ng-container>

@@ -1,0 +1,21 @@
+<div class="textareainput" ngClass="{{ngClass()}}">
+    <textarea
+        id="{{'custom-form-' + fieldName()}}"
+        class="roboto-custom-font"
+        [formField]="field"
+        placeholder="{{placeholder()}}"
+        [ngStyle]="customStyle()"
+        rows="{{rows()}}"
+    ></textarea>
+    @if(field().invalid() && (field().dirty() || field().touched())) {
+        <i
+            id="error-icon"
+            class="icon-base icon-Warning"
+            ngClass="warning-input-text"
+        ></i>
+    }
+</div>
+<app-validation-input
+    [fieldState]="fieldState()"
+    [fieldName]="fieldName()"
+></app-validation-input>

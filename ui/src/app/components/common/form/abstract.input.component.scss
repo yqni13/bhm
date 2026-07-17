@@ -1,0 +1,28 @@
+@use '../../../../stylesheets/utilities' as utils;
+
+
+$icon-margin-error: 7.5px;
+$icon-size-warning: 30px;
+$padding-start: 7.5px;
+$icon-padding-error: calc(($icon-margin-error * 2) + $icon-size-warning);
+$border: 2px;
+
+app-validation-input {
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+#error-icon {
+    display: flex;
+    position: absolute;
+    justify-self: end;
+    color: var(--theme-error);
+}
+
+.warning-input-text {
+    position: absolute;
+    align-self: center;
+    justify-content: end;
+    margin-right: 7.5px;
+}
