@@ -15,17 +15,23 @@
 [data-theme='lightmode'] {
     --theme-body-bg: #{utils.$color-lightmode-bg};
     --theme-body-text: #{utils.$color-lightmode-text};
+    --theme-nav-grey: #{utils.$color-dark-grey};
     --theme-error: #{utils.$color-lightmode-error};
     --theme-success: #{utils.$color-lightmode-success};
     --theme-info: #{utils.$color-lightmode-info};
     --theme-warning: #{utils.$color-lightmode-warning};
+    --theme-primary: #{utils.$color-lightmode-primary};
+    --theme-secondary: #{utils.$color-lightmode-secondary};
 }
 
 [data-theme='darkmode'] {
     --theme-body-bg: #{utils.$color-darkmode-bg};
     --theme-body-text: #{utils.$color-darkmode-text};
+    --theme-nav-grey: #{utils.$color-light-grey};
     --theme-error: #{utils.$color-darkmode-error};
     --theme-success: #{utils.$color-darkmode-success};
     --theme-info: #{utils.$color-darkmode-info};
     --theme-warning: #{utils.$color-darkmode-warning};
+    --theme-primary: #{utils.$color-darkmode-primary};
+    --theme-secondary: #{utils.$color-darkmode-secondary};
 }

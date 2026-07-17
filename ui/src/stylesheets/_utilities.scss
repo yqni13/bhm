@@ -6,11 +6,17 @@ $device-phone-portrait: 550px;
 
 
 /* COLOR DEFINITIONS */
+$color-ice-white: #f0f8ff;
+$color-rich-black: #020d19;
+
 $color-lightmode-bg: #dcdcfa;
 $color-darkmode-bg: #14151a;
 
-$color-lightmode-text: #020d19;
-$color-darkmode-text: #f0f8ff;
+$color-lightmode-text: $color-rich-black;
+$color-darkmode-text: $color-ice-white;
+
+$color-dark-grey: rgb(162, 161, 161);
+$color-light-grey: rgb(75, 75, 75);
 
 $color-lightmode-error: #ee1b1b;
 $color-darkmode-error: #ba3131;
@@ -23,6 +29,13 @@ $color-darkmode-warning: #b17a0b;
 
 $color-lightmode-info: #384bfbe6;
 $color-darkmode-info: #235cb1;
+
+/* HIGHLIGHT COLORS */
+$color-lightmode-primary: #672604;
+$color-darkmode-primary: #943e0f;
+
+$color-lightmode-secondary: #fff;
+$color-darkmode-secondary: #fff;
 
 
 /* STANDARD PX SIZES */
