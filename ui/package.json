@@ -1,6 +1,6 @@
 {
   "name": "bhm-ui",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "scripts": {
     "ng": "ng",
     "start": "node ./scripts/set-env.dev.ts && ng serve --open",

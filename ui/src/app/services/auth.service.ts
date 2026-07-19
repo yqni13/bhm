@@ -10,6 +10,6 @@ export class AuthService {
      * @description Temporary function to simulate authentication.
      */
     isAuthenticated(): boolean {
-        return true;
+        return false;
     }
 }
