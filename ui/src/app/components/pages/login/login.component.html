@@ -1,3 +1,31 @@
-<section>
-    <h1>{{title}}</h1>
+<section class="bhm-login">
+    <div id="bhm-login-main">
+        <form>
+            <div class="bhm-login-input">
+                <app-text-input
+                    [fieldState]="loginForm.email()"
+                    [placeholder]="'email'"
+                    [fieldName]="'email'"
+                    [autoFocus]="true"
+                ></app-text-input>
+            </div>
+            <div class="bhm-login-input">
+                <app-text-input
+                    [fieldState]="loginForm.password()"
+                    [placeholder]="'password'"
+                    [ngClass]="'bhm-input-password'"
+                    [fieldName]="'password'"
+                    [inputType]="'password'"
+                ></app-text-input>
+            </div>
+            <a
+                class="btn-primary login-submit"
+                (click)="onSubmit()"
+                (keydown.enter)="onSubmit()"
+                [attr.tabindex]="0"
+            >
+                <span>Login</span>
+            </a>
+        </form>
+    </div>
 </section>
