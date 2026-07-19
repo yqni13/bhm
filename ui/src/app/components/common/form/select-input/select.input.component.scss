@@ -1,0 +1,30 @@
+@use '../../../../../stylesheets/utilities' as utils;
+@use '../abstract.input.component.scss' as inherit;
+
+
+.selectinput {
+    display: grid;
+    position: relative;
+
+    select {
+        width: 100%;
+        padding: 10px inherit.$icon-padding-error 10px calc(inherit.$padding-start - 3px);
+        border-radius: calc(utils.$size5 + inherit.$border);
+        text-overflow: ellipsis;
+        border: inherit.$border outset var(--theme-nav-grey);
+        option {
+            text-overflow: ellipsis;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+#error-icon {
+    bottom: 5px;
+}
+
+.warning-input-text {
+    margin-right: 17.5px;
+}

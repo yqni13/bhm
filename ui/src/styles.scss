@@ -1,4 +1,4 @@
-@use './stylesheets/utilities' as util;
+@use './stylesheets/utilities' as utils;
 
 @forward './stylesheets/media.scss';
 @forward './stylesheets/defines.scss';
@@ -38,4 +38,22 @@ body {
 div,
 section {
     display: flex;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px utils.$size25;
+    border: 1px outset transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    color: utils.$color-ice-white;
+    background-color: var(--theme-primary);
+    text-decoration: none;
+    @media screen and (width > utils.$device-tablet-landscape) {
+        &:hover {
+            box-shadow: 1px 1px 3px var(--theme-body-text);
+        }
+    }
 }
