@@ -2,10 +2,30 @@
     <input
         id="{{'custom-form-' + fieldName()}}"
         [formField]="field"
-        type="{{inputType()}}"
+        type="{{inputTypeComputed()}}"
         placeholder="{{placeholder()}}"
         [ngStyle]="customStyle()"
+        [ngStyle]="indentStyleComputed()"
+        #isAutoFocus
     >
+    @if(ngClass() === 'bhm-input-password' && !showPassword()) {
+        <i
+            class="icon-base icon-EyeClosed icon-eye"
+            (click)="setPasswordVisibility(true)"
+            (keydown)="setPasswordVisibility(true)"
+            [tabindex]="0"
+            [ngStyle]="eyeStyleComputed()"
+        ></i>
+    }
+    @if(ngClass() === 'bhm-input-password' && showPassword()) {
+        <i
+            class="icon-base icon-EyeOpen icon-eye"
+            (click)="setPasswordVisibility(false)"
+            (keydown)="setPasswordVisibility(false)"
+            [tabindex]="0"
+            [ngStyle]="eyeStyleComputed()"
+        ></i>
+    }
     @if(field().invalid() && (field().dirty() || field().touched())) {
         <i
             id="error-icon"

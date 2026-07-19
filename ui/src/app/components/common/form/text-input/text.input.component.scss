@@ -6,11 +6,23 @@
     display: grid;
     position: relative;
     input {
-        $indent: calc(inherit.$padding-start + inherit.$icon-padding-error + (inherit.$border * 2));
-        width: calc(100% - $indent);
-        padding: 10px inherit.$icon-padding-error 10px inherit.$padding-start;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: inherit.$padding-start;
         border-radius: calc(utils.$size5 + inherit.$border);
         text-overflow: ellipsis;
         border: inherit.$border outset var(--theme-nav-grey);
+    }
+    .icon-eye {
+        $size: 20px;
+        display: flex;
+        position: absolute;
+        align-self: center;
+        justify-self: end;
+        width: $size;
+        height: $size;
+        cursor: pointer;
+        opacity: 0.6;
+        color: var(--theme-base-reverse);
     }
 }

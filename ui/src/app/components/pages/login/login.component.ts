@@ -26,6 +26,8 @@ export class LoginComponent {
     private readonly auth = inject(AuthService);
 
     private demoLogin = { email: 'email', password: 'password' };
+    protected validation = { maxEmail: 256, maxPass: 256 };
+
     private loginModel = signal<LoginFormData>(this.initEmptyForm());
     protected loginForm = this.setForm();
 
@@ -39,8 +41,10 @@ export class LoginComponent {
     private setForm(): FieldTree<LoginFormData> {
         return form(this.loginModel, (schemaPath) => {
             required(schemaPath.email);
+            CustomValidator.customMaxLength(schemaPath.email, {max: this.validation.maxEmail});
+
             required(schemaPath.password);
-            CustomValidator.customMaxLength(schemaPath.password, {max: 20});
+            CustomValidator.customMaxLength(schemaPath.password, {max: this.validation.maxPass});
         })
     }
 
