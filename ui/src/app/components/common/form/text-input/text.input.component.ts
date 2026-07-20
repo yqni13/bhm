@@ -55,16 +55,16 @@ export class TextInputComponent extends AbstractInputComponent implements AfterV
 
     setIndentStyle(): Record<string, string> {
         // Dynamic indent styling necessary due to additional icon for input type 'password'.
-        const error = (this.field().invalid() && (this.field().dirty() || this.field().touched()));
+        const isInvalid = (this.field().invalid() && (this.field().dirty() || this.field().touched()));
         let [width, padRight] = [0, 0];
         if(this.inputType() === 'password') {
-            padRight = error ? this.iPadError + this.indent.iEye : this.indent.iEye * 2;
-            width = error 
+            padRight = isInvalid ? this.iPadError + this.indent.iEye : this.indent.iEye * 2;
+            width = isInvalid 
                 ? this.indent.iPadStart + this.iPadError + this.indent.iEye + (this.indent.border * 2) 
                 : this.indent.iPadStart + this.indent.iEye + (this.indent.border * 2);
         } else if(this.inputType() === 'text') {
-            padRight = error ? this.iPadError - this.indent.iPadStart : this.indent.iPadStart;
-            width = error 
+            padRight = isInvalid ? this.iPadError - this.indent.iPadStart : this.indent.iPadStart;
+            width = isInvalid 
                 ? this.indent.iPadStart + this.iPadError + (this.indent.border * 2) 
                 : this.indent.iPadStart + (this.indent.border * 2);
         }

@@ -21,7 +21,7 @@ export class AbstractInputComponent {
         iPadStart: 7.5,
         border: 2,
         iEye: 15
-    };
+    }; // in px
     iPadError = (this.indent.iMarginError * 2) + this.indent.iSizeWarn;
 
     get field(): Field<string> {
