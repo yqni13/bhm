@@ -9,9 +9,6 @@
     justify-content: center;
 
     #bhm-login-main {
-        width: calc(50% - 15px);
-        height: calc(75% - 15px);
-        border: 1px solid grey;
         border-radius: 20px;
         padding: 15px;
 
@@ -25,17 +22,11 @@
 
             .bhm-login-input {
                 margin-bottom: 15px;
-                width: 40%;
 
                 app-text-input {
                     display: block;
                     width: 100%;
                 }
-            }
-            .login-submit {
-                // Padding + border from .btn-primary
-                $btn-primary-specs: 52px;
-                width: calc(40% - $btn-primary-specs);
             }
         }
     }
