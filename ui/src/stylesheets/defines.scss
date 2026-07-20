@@ -15,6 +15,7 @@
 [data-theme='lightmode'] {
     --theme-body-bg: #{utils.$color-lightmode-bg};
     --theme-body-text: #{utils.$color-lightmode-text};
+    --theme-base-reverse: #{utils.$color-darkmode-text};
     --theme-nav-grey: #{utils.$color-dark-grey};
     --theme-error: #{utils.$color-lightmode-error};
     --theme-success: #{utils.$color-lightmode-success};
@@ -27,6 +28,7 @@
 [data-theme='darkmode'] {
     --theme-body-bg: #{utils.$color-darkmode-bg};
     --theme-body-text: #{utils.$color-darkmode-text};
+    --theme-base-reverse: #{utils.$color-lightmode-text};
     --theme-nav-grey: #{utils.$color-light-grey};
     --theme-error: #{utils.$color-darkmode-error};
     --theme-success: #{utils.$color-darkmode-success};

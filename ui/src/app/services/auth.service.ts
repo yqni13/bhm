@@ -1,15 +1,17 @@
-import { Injectable } from "@angular/core";
+import { computed, Injectable, signal } from "@angular/core";
 
 @Injectable({
     providedIn: 'root'
 })
 export class AuthService {
 
+    private status = signal(false);
+    isAuthenticated = computed(() => this.status());
+
     /**
-     * 
-     * @description Temporary function to simulate authentication.
+     * @description Method to manually set authentication status (TESTING ONLY).
      */
-    isAuthenticated(): boolean {
-        return false;
+    setStatus(value: boolean) {
+        this.status.set(value);
     }
 }

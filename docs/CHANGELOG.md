@@ -1,8 +1,19 @@
 ## 📜 $\textsf{\color{salmon}{List\ of\ updates}}$
 
+### $\textsf{\color{skyblue}2026/07/20}$
+
+$\textsf{[v0.4.0\ =>\ {\textbf{\color{brown}v0.5.3}]}}$ ui<br>
+- $\textsf{\color{teal}Addition:}$ Added login component.
+- - $\textsf{\color{orange}Patch:}$ Updated:
+  + form styling for additional icons (f.e. eye icon for password input)
+  + form validation
+  + responsive design
+
+<br>
+
 ### $\textsf{\color{skyblue}2026/07/17}$
 
-$\textsf{[v0.3.1\ =>\ {\textbf{\color{brown}v0.4.0}]}}$ ui<br>
+$\textsf{[v0.3.1\ =>\ v0.4.0]}$ ui<br>
 - $\textsf{\color{teal}Addition:}$ Added custom form components (input + validation).
 
 <br>
