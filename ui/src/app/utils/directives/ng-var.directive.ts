@@ -1,15 +1,15 @@
 import { Directive, inject, Input, TemplateRef, ViewContainerRef } from "@angular/core";
 
 @Directive({
-    selector: '[bhm]'
+    selector: '[bhmVar]'
 })
 export class VarDirective {
     private readonly templateRef = inject(TemplateRef<unknown>);
     private readonly vcRef = inject(ViewContainerRef);
 
     @Input()
-    set bhm(context: unknown) {
-        this.context.$implicit = this.context.bhm = context;
+    set bhmVar(context: unknown) {
+        this.context.$implicit = this.context.bhmVar = context;
 
         if (!this.hasView) {
             this.vcRef.createEmbeddedView(this.templateRef, this.context);
@@ -19,10 +19,10 @@ export class VarDirective {
 
     private context: {
         $implicit: unknown;
-        bhm: unknown;
+        bhmVar: unknown;
     } = {
         $implicit: null,
-        bhm: null,
+        bhmVar: null,
     };
 
     private hasView = false;

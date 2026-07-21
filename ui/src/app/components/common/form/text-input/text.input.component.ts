@@ -27,8 +27,9 @@ export class TextInputComponent extends AbstractInputComponent implements AfterV
 
     readonly inputType = input('text');
     readonly autoFocus = input(false);
+    readonly transparency = input(false);
     readonly inputTypeComputed = computed(() => this.showPassword() ? 'text' : 'password');
-    readonly eyeStyleComputed = computed(() => this.setEyeStyle());
+    readonly lockStyleComputed = computed(() => this.setLockStyle());
     readonly indentStyleComputed = computed(() => this.setIndentStyle());
 
     protected readonly showPassword = signal(false);
@@ -46,7 +47,7 @@ export class TextInputComponent extends AbstractInputComponent implements AfterV
         }
     }
 
-    setEyeStyle(): Record<string, string> {
+    setLockStyle(): Record<string, string> {
         if(this.field().invalid() && (this.field().dirty() || this.field().touched())) {
             return { 'margin-right': '40px' };
         }
@@ -58,10 +59,10 @@ export class TextInputComponent extends AbstractInputComponent implements AfterV
         const isInvalid = (this.field().invalid() && (this.field().dirty() || this.field().touched()));
         let [width, padRight] = [0, 0];
         if(this.inputType() === 'password') {
-            padRight = isInvalid ? this.iPadError + this.indent.iEye : this.indent.iEye * 2;
+            padRight = isInvalid ? this.iPadError + this.indent.iLock : this.indent.iLock * 2;
             width = isInvalid 
-                ? this.indent.iPadStart + this.iPadError + this.indent.iEye + (this.indent.border * 2) 
-                : this.indent.iPadStart + this.indent.iEye + (this.indent.border * 2);
+                ? this.indent.iPadStart + this.iPadError + this.indent.iLock + (this.indent.border * 2) 
+                : this.indent.iPadStart + this.indent.iLock + (this.indent.border * 2);
         } else if(this.inputType() === 'text') {
             padRight = isInvalid ? this.iPadError - this.indent.iPadStart : this.indent.iPadStart;
             width = isInvalid 

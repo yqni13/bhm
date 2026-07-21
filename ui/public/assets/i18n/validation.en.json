@@ -1,0 +1,13 @@
+{
+    "validation": {
+        "backend": {},
+        "ui": {
+            "form": {
+                "email": "Field \"{{fieldName}}\" is not a valid email address.",
+                "maxlength": "Field \"{{fieldName}}\" must not be longer than {{fieldMax}} characters.",
+                "minlength": "Field \"{{fieldName}}\" must not be shorter than {{fieldMin}} characters.",
+                "required": "Field \"{{fieldName}}\" is required."
+            }
+        }
+    }
+}

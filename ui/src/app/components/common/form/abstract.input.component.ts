@@ -20,7 +20,7 @@ export class AbstractInputComponent {
         iSizeWarn: 30,
         iPadStart: 7.5,
         border: 2,
-        iEye: 15
+        iLock: 15
     }; // in px
     iPadError = (this.indent.iMarginError * 2) + this.indent.iSizeWarn;
 

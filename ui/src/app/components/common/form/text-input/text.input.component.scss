@@ -13,7 +13,7 @@
         text-overflow: ellipsis;
         border: inherit.$border outset var(--theme-nav-grey);
     }
-    .icon-eye {
+    .icon-lock {
         $size: 20px;
         display: flex;
         position: absolute;
@@ -22,7 +22,7 @@
         width: $size;
         height: $size;
         cursor: pointer;
-        opacity: 0.6;
+        opacity: 0.8;
         color: var(--theme-base-reverse);
     }
 }

@@ -1,0 +1,26 @@
+{
+    "components": {
+        "common": {},
+        "pages": {
+            "home": {
+                "title": "Willkommen bei: Better Home Management (BHM)"
+            },
+            "login": {
+                "button": {
+                    "login": "Anmelden"
+                },
+                "form": {
+                    "name": {
+                        "email": "Email",
+                        "password": "Passwort"
+                    },
+                    "placeholder": {
+                        "email": "Email",
+                        "password": "Passwort"
+                    }
+                },
+                "title": "Login"
+            }
+        }
+    }
+}
