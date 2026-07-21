@@ -1,21 +1,24 @@
 <section class="bhm-login">
     <div id="bhm-login-main">
+        <h1>{{'components.pages.login.title' | translate}}</h1>
         <form>
             <div class="bhm-login-input">
                 <app-text-input
                     [fieldState]="loginForm.email()"
-                    [placeholder]="'email'"
-                    [fieldName]="'email'"
+                    [fieldName]="'components.pages.login.form.name.email' | translate"
+                    [placeholder]="'components.pages.login.form.placeholder.email' | translate"
                     [autoFocus]="true"
+                    [transparency]="true"
                 ></app-text-input>
             </div>
             <div class="bhm-login-input">
                 <app-text-input
                     [fieldState]="loginForm.password()"
-                    [placeholder]="'password'"
+                    [fieldName]="'components.pages.login.form.name.password' | translate"
+                    [placeholder]="'components.pages.login.form.placeholder.password' | translate"
                     [ngClass]="'bhm-input-password'"
-                    [fieldName]="'password'"
                     [inputType]="'password'"
+                    [transparency]="true"
                 ></app-text-input>
             </div>
             <a
@@ -24,7 +27,7 @@
                 (keydown.enter)="onSubmit()"
                 [attr.tabindex]="0"
             >
-                <span>Login</span>
+                <span>{{'components.pages.login.button.login' | translate}}</span>
             </a>
         </form>
     </div>

@@ -6,6 +6,7 @@
         placeholder="{{placeholder()}}"
         [ngStyle]="customStyle()"
         [ngStyle]="indentStyleComputed()"
+        [ngClass]="transparency() ? 'transparency' : ''"
         #isAutoFocus
     >
     @if(ngClass() === 'bhm-input-password' && !showPassword()) {

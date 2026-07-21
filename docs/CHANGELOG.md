@@ -1,10 +1,21 @@
 ## 📜 $\textsf{\color{salmon}{List\ of\ updates}}$
 
+### $\textsf{\color{skyblue}2026/07/21}$
+
+$\textsf{[v0.5.3\ =>\ {\textbf{\color{brown}v0.6.3}]}}$ ui<br>
+- $\textsf{\color{teal}Addition:}$ Added i18n via Angular ngx-translate (v18).
+- $\textsf{\color{orange}Patch:}$ Updated:
+  + custom text input component styling 
+  + transparency mode for custom text input component
+  + validation component (map values to translations)
+
+<br>
+
 ### $\textsf{\color{skyblue}2026/07/20}$
 
-$\textsf{[v0.4.0\ =>\ {\textbf{\color{brown}v0.5.3}]}}$ ui<br>
+$\textsf{[v0.4.0\ =>\ v0.5.3]}$ ui<br>
 - $\textsf{\color{teal}Addition:}$ Added login component.
-- - $\textsf{\color{orange}Patch:}$ Updated:
+- $\textsf{\color{orange}Patch:}$ Updated:
   + form styling for additional icons (f.e. eye icon for password input)
   + form validation
   + responsive design

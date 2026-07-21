@@ -7,12 +7,14 @@ import { AuthService } from "../../../services/auth.service";
 import { Router } from "@angular/router";
 import { BaseRoute } from "../../../utils/routes/base.route.enum";
 import * as CustomValidator from "../../../utils/helper/custom-validators";
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
     selector: 'app-login',
     imports: [
         CommonModule,
-        TextInputComponent
+        TextInputComponent,
+        TranslatePipe
     ],
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss',
