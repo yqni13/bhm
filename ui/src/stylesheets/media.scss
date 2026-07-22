@@ -12,7 +12,7 @@
 @media screen and (width > utils.$device-desktop) {
     .bhm-login {
         #bhm-login-main {
-            border: 1px solid grey;
+            border: 1px outset utils.$color-ice-white;
             width: calc(50% - 15px);
             height: calc(75% - 15px);
             .bhm-login-input {
@@ -33,7 +33,7 @@
 @media screen and (width <= utils.$device-desktop) {
     .bhm-login {
         #bhm-login-main {
-            border: 1px solid grey;
+            border: 1px outset utils.$color-ice-white;
             width: calc(75% - 15px);
             height: calc(75% - 15px);
             .bhm-login-input {

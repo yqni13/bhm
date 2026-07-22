@@ -1,22 +1,22 @@
 [
     {
         "error": "required",
-        "msg": "Field \"{{VAL_0}}\" is required.",
+        "msg": "validation.ui.form.required",
         "mapping": ["fieldName"]
     },
     {
         "error": "minlength",
-        "msg": "Content \"{{VAL_0}}\" must be longer than {{VAL_1}} characters.",
+        "msg": "validation.ui.form.minlength",
         "mapping": ["fieldName", "fieldMin"]
     },
     {
         "error": "maxlength",
-        "msg": "Content \"{{VAL_0}}\" must not be longer than {{VAL_1}} characters.",
+        "msg": "validation.ui.form.maxlength",
         "mapping": ["fieldName", "fieldMax"]
     },
     {
         "error": "email",
-        "msg": "Your input \"{{VAL_0}}\" is not a valid email address.",
+        "msg": "validation.ui.form.email",
         "mapping": ["email"]
     }
 ]

@@ -9,11 +9,23 @@
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: inherit.$padding-start;
-        border-radius: calc(utils.$size5 + inherit.$border);
         text-overflow: ellipsis;
-        border: inherit.$border outset var(--theme-nav-grey);
+
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: inherit.$border outset var(--theme-nav-grey);
+        &:focus-visible {
+            outline: none;
+        }
     }
-    .icon-eye {
+    input.transparency {
+        background-color: transparent!important;
+        &::placeholder {
+            color: utils.$color-light-grey;
+        }
+    }
+    .icon-lock {
         $size: 20px;
         display: flex;
         position: absolute;
@@ -22,7 +34,7 @@
         width: $size;
         height: $size;
         cursor: pointer;
-        opacity: 0.6;
+        opacity: 0.8;
         color: var(--theme-base-reverse);
     }
 }

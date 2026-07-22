@@ -1,6 +1,6 @@
 {
   "name": "bhm-ui",
-  "version": "0.5.3",
+  "version": "0.6.3",
   "scripts": {
     "ng": "ng",
     "start": "node ./scripts/set-env.dev.ts && ng serve --open",
@@ -23,6 +23,8 @@
     "@angular/platform-server": "^22.0.7",
     "@angular/router": "^22.0.7",
     "@angular/ssr": "^22.0.7",
+    "@ngx-translate/core": "^18.0.0",
+    "@ngx-translate/http-loader": "^18.0.0",
     "axios": "^1.18.1",
     "esbuild": "^0.28.1",
     "express": "^5.1.0",
