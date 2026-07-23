@@ -1,8 +1,15 @@
 ## 📜 $\textsf{\color{salmon}{List\ of\ updates}}$
 
+### $\textsf{\color{skyblue}2026/07/23}$
+
+$\textsf{[v0.6.3\ =>\ {\textbf{\color{brown}v0.7.0}]}}$ ui<br>
+- $\textsf{\color{teal}Addition:}$ Added notification modal.
+
+<br>
+
 ### $\textsf{\color{skyblue}2026/07/21}$
 
-$\textsf{[v0.5.3\ =>\ {\textbf{\color{brown}v0.6.3}]}}$ ui<br>
+$\textsf{[v0.5.3\ =>\ v0.6.3]}$ ui<br>
 - $\textsf{\color{teal}Addition:}$ Added i18n via Angular ngx-translate (v18).
 - $\textsf{\color{orange}Patch:}$ Updated:
   + custom text input component styling 

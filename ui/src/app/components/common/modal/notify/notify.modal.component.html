@@ -1,0 +1,40 @@
+<div class="notifymodal-container" [ngClass]="'notifymodal-' + notification().type">
+    <div
+        class="notifymodal-content"
+        [ngClass]="!!notification().text ? 'notifymodal-multiline' : 'notifymodal-singleline'"
+    >
+        <div class="notifymodal-title">
+            <span>{{notification().type}}: </span>
+            <h4>{{notification().title | translate}}</h4>
+        </div>
+        @if(!!notification().text) {
+            <div class="notifymodal-text">
+                {{notification().text | translate}}
+                @if(notification().phone) {
+                    <a href="tel:{{notification().phone}}">
+                        <i class="icon-base icon-Phone"></i>
+                        {{notification().phone}}
+                    </a>
+                }
+                @if(notification().mail) {
+                    <a href="mailto:{{notification().mail}}">
+                        <i class="icon-base icon-MailThin"></i>
+                        {{notification().mail}}
+                    </a>
+                }
+            </div>
+        }
+    </div>
+    @if(!notification().autoClose) {
+        <div class="notifymodal-btn">
+            <div class="notifymodal-btn-wrapper">
+                <i 
+                    class="icon-base icon-Close" 
+                    (click)="notifyModal.close(notification())"
+                    (keydown.enter)="notifyModal.close(notification())"
+                    [tabindex]="0"
+                ></i>
+            </div>
+        </div>
+    }
+</div>

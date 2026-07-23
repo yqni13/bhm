@@ -1,0 +1,168 @@
+@use '../../../../../stylesheets/utilities' as utils;
+
+
+.notifymodal-container {
+    width: fit-content;
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    background-color: utils.$color-darkmode-comp-grey;
+    margin: 40px 0 15px 0;
+    margin-bottom: 0;
+    border-radius: 10px;
+}
+
+.notifymodal-error {
+    border: 2px solid var(--theme-error);
+    box-shadow: 1px 1px 5px 1px var(--theme-error);
+    span,
+    i {
+        color: var(--theme-error);
+    }
+
+    .notifymodal-btn-wrapper {
+        border-color: var(--theme-error);
+        @media screen and (width > utils.$device-tablet-landscape) {
+            &:hover {
+                filter: brightness(1.4);
+            }
+        }
+    }
+}
+.notifymodal-info {
+    border: 2px solid var(--theme-info);
+    box-shadow: 1px 1px 5px 1px var(--theme-info);
+    span,
+    i {
+        color: var(--theme-info);
+    }
+
+    .notifymodal-btn-wrapper {
+        border-color: var(--theme-info);
+        @media screen and (width > utils.$device-tablet-landscape) {
+            &:hover {
+                filter: brightness(1.4);
+            }
+        }
+    }
+}
+.notifymodal-success {
+    border: 2px solid var(--theme-success);
+    box-shadow: 1px 1px 5px 1px var(--theme-success);
+    span,
+    i {
+        color: var(--theme-success);
+    }
+
+    .notifymodal-btn-wrapper {
+        border-color: var(--theme-success);
+        @media screen and (width > utils.$device-tablet-landscape) {
+            &:hover {
+                filter: brightness(1.4);
+            }
+        }
+    }
+}
+.notifymodal-warning {
+    border: 2px solid var(--theme-warning);
+    box-shadow: 1px 1px 5px 1px var(--theme-warning);
+    span,
+    i {
+        color: var(--theme-warning);
+    }
+
+    .notifymodal-btn-wrapper {
+        border-color: var(--theme-warning);
+        @media screen and (width > utils.$device-tablet-landscape) {
+            &:hover {
+                filter: brightness(1.4);
+            }
+        }
+    }
+}
+
+.notifymodal-content {
+    display: flex;
+    flex-direction: column;
+
+    .notifymodal-title {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0 15px 0;
+
+        span {
+            padding-left: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            align-content: center;
+            font-size: 15px;
+        }
+        h4 {
+            color: utils.$color-ice-white;
+            padding: 0 utils.$size15;
+            margin-block: 0;
+            margin-inline: 0;
+            font-size: 15px;
+            align-self: end;
+            text-transform: uppercase;
+        }
+    }
+    .notifymodal-text {  
+        flex-direction: column;
+        color: utils.$color-light-grey;
+        padding: 0 15px;
+        margin-block: 0;
+        margin-inline: 0;
+        font-size: 12px;
+        white-space: pre-line;
+
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: var(--theme-primary);
+            margin-top: 7.5px;
+            i {
+                $size: 20px;
+                width: $size;
+                height: $size;
+                margin-right: 5px;
+                color: utils.$color-light-grey;
+            }
+            @media screen and (width > utils.$device-tablet-landscape) {
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(1.6);
+                }
+            }
+        }
+    }
+}
+
+.notifymodal-singleline {
+    align-self: center;
+    padding: 25px 0;
+
+    div {
+        padding: 0!important;
+    }
+}
+
+.notifymodal-multiline {
+    padding: 15px 0;
+}
+
+.notifymodal-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+
+    .notifymodal-btn-wrapper {
+        display: flex;
+        border-width: 1.5px;
+        border-style: solid;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+}
