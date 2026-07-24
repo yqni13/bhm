@@ -10,8 +10,17 @@
     margin: 40px 0 15px 0;
     margin-bottom: 0;
     border-radius: 10px;
+
+    .notifymodal-btn-wrapper {
+        @media screen and (width > utils.$device-tablet-landscape) {
+            &:hover {
+                filter: brightness(1.6);
+            }
+        }
+    }
 }
 
+// ERROR
 .notifymodal-error {
     border: 2px solid var(--theme-error);
     box-shadow: 1px 1px 5px 1px var(--theme-error);
@@ -22,13 +31,10 @@
 
     .notifymodal-btn-wrapper {
         border-color: var(--theme-error);
-        @media screen and (width > utils.$device-tablet-landscape) {
-            &:hover {
-                filter: brightness(1.4);
-            }
-        }
     }
 }
+
+// INFO
 .notifymodal-info {
     border: 2px solid var(--theme-info);
     box-shadow: 1px 1px 5px 1px var(--theme-info);
@@ -39,13 +45,10 @@
 
     .notifymodal-btn-wrapper {
         border-color: var(--theme-info);
-        @media screen and (width > utils.$device-tablet-landscape) {
-            &:hover {
-                filter: brightness(1.4);
-            }
-        }
     }
 }
+
+// SUCCESS
 .notifymodal-success {
     border: 2px solid var(--theme-success);
     box-shadow: 1px 1px 5px 1px var(--theme-success);
@@ -56,13 +59,10 @@
 
     .notifymodal-btn-wrapper {
         border-color: var(--theme-success);
-        @media screen and (width > utils.$device-tablet-landscape) {
-            &:hover {
-                filter: brightness(1.4);
-            }
-        }
     }
 }
+
+// WARNING
 .notifymodal-warning {
     border: 2px solid var(--theme-warning);
     box-shadow: 1px 1px 5px 1px var(--theme-warning);
@@ -73,11 +73,6 @@
 
     .notifymodal-btn-wrapper {
         border-color: var(--theme-warning);
-        @media screen and (width > utils.$device-tablet-landscape) {
-            &:hover {
-                filter: brightness(1.4);
-            }
-        }
     }
 }
 
