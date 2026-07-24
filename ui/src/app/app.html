@@ -1,1 +1,8 @@
+@if(notifyModal.notifications().length > 0) {
+    <div class="main-notifymodal">
+        @for(notification of notifyModal.notifications(); track $index) {
+            <app-notify-modal [notification]="notification"></app-notify-modal>
+        }
+    </div>
+}
 <router-outlet />

@@ -1,0 +1,32 @@
+{
+    "components": {
+        "common": {},
+        "pages": {
+            "home": {
+                "title": "Willkommen bei: Better Home Management (BHM)"
+            },
+            "login": {
+                "button": {
+                    "login": "Anmelden"
+                },
+                "form": {
+                    "name": {
+                        "email": "Email",
+                        "password": "Passwort"
+                    },
+                    "placeholder": {
+                        "email": "Email",
+                        "password": "Passwort"
+                    },
+                    "submit": {
+                        "invalid": {
+                            "text": "Prüfen Sie auf falsche oder fehlende Eingaben vor dem Login.",
+                            "title": "Ungültige Eingabe"
+                        }
+                    }
+                },
+                "title": "Login"
+            }
+        }
+    }
+}

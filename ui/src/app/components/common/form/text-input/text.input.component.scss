@@ -6,11 +6,35 @@
     display: grid;
     position: relative;
     input {
-        $indent: calc(inherit.$padding-start + inherit.$icon-padding-error + (inherit.$border * 2));
-        width: calc(100% - $indent);
-        padding: 10px inherit.$icon-padding-error 10px inherit.$padding-start;
-        border-radius: calc(utils.$size5 + inherit.$border);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: inherit.$padding-start;
         text-overflow: ellipsis;
-        border: inherit.$border outset var(--theme-nav-grey);
+
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: inherit.$border outset var(--theme-nav-grey);
+        &:focus-visible {
+            outline: none;
+        }
+    }
+    input.transparency {
+        background-color: transparent!important;
+        &::placeholder {
+            color: utils.$color-light-grey;
+        }
+    }
+    .icon-lock {
+        $size: 20px;
+        display: flex;
+        position: absolute;
+        align-self: center;
+        justify-self: end;
+        width: $size;
+        height: $size;
+        cursor: pointer;
+        opacity: 0.8;
+        color: var(--theme-base-reverse);
     }
 }

@@ -1,0 +1,13 @@
+{
+    "validation": {
+        "backend": {},
+        "ui": {
+            "form": {
+                "email": "Das Feld \"{{fieldName}}\" ist keine gültige Email-Adresse.",
+                "maxlength": "Das Feld \"{{fieldName}}\" darf nicht länger als {{fieldMax}} Zeichen sein.",
+                "minlength": "Das Feld \"{{fieldName}}\" darf nicht kürzer als {{fieldMin}} Zeichen sein.",
+                "required": "Das Feld \"{{fieldName}}\" ist erforderlich."
+            }
+        }
+    }
+}

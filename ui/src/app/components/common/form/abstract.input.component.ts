@@ -15,6 +15,14 @@ export class AbstractInputComponent {
     readonly byChange = output<unknown>();
 
     isFocused = false;
+    indent = {
+        iMarginError: 7.5,
+        iSizeWarn: 30,
+        iPadStart: 7.5,
+        border: 2,
+        iLock: 15
+    }; // in px
+    iPadError = (this.indent.iMarginError * 2) + this.indent.iSizeWarn;
 
     get field(): Field<string> {
         return this.fieldState().fieldTree as unknown as Field<string>;

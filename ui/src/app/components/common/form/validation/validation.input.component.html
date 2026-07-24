@@ -4,11 +4,11 @@
             @for(validation of validations; track $index) {
                 @if(field().getError(validation.error)) {
                     <div class="validation-message">
-                        {{
-                            validation.mapping 
-                                ? mapErrorValues(validation.msg, validation.mapping)
-                                : validation.msg
-                        }}
+                            {{
+                                validation.mapping
+                                    ? ( validation.msg | translate:mapTranslateParams(validation.mapping) )
+                                    : ( validation.msg | translate )
+                            }}
                     </div>
                 }
             }

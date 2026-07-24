@@ -1,3 +1,34 @@
-<section>
-    <h1>{{title}}</h1>
+<section class="bhm-login">
+    <div id="bhm-login-main">
+        <h1>{{'components.pages.login.title' | translate}}</h1>
+        <form>
+            <div class="bhm-login-input">
+                <app-text-input
+                    [fieldState]="loginForm.email()"
+                    [fieldName]="'components.pages.login.form.name.email' | translate"
+                    [placeholder]="'components.pages.login.form.placeholder.email' | translate"
+                    [autoFocus]="true"
+                    [transparency]="true"
+                ></app-text-input>
+            </div>
+            <div class="bhm-login-input">
+                <app-text-input
+                    [fieldState]="loginForm.password()"
+                    [fieldName]="'components.pages.login.form.name.password' | translate"
+                    [placeholder]="'components.pages.login.form.placeholder.password' | translate"
+                    [ngClass]="'bhm-input-password'"
+                    [inputType]="'password'"
+                    [transparency]="true"
+                ></app-text-input>
+            </div>
+            <a
+                class="btn-primary login-submit"
+                (click)="onSubmit()"
+                (keydown.enter)="onSubmit()"
+                [attr.tabindex]="0"
+            >
+                <span>{{'components.pages.login.button.login' | translate}}</span>
+            </a>
+        </form>
+    </div>
 </section>

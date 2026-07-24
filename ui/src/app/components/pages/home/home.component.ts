@@ -1,9 +1,12 @@
 import { Component, inject, OnInit } from "@angular/core";
 import { NavigationService } from "../../../services/navigation.service";
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
     selector: 'app-home',
-    imports: [],
+    imports: [
+        TranslatePipe
+    ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })

@@ -1,0 +1,50 @@
+@use '../../../../stylesheets/utilities' as utils;
+
+
+.bhm-login {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/assets/img/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    #bhm-login-main {
+        $padding-main: 15px;
+        flex-direction: column;
+        position: relative;
+        border-radius: 20px;
+        padding: $padding-main;
+        backdrop-filter: blur(20px);
+
+        h1 {
+            width: calc(100% - ($padding-main * 2));
+            top: $padding-main;
+            text-align: center;
+            position: absolute;
+            font-weight: 400;
+            font-size: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            .bhm-login-input {
+                margin-bottom: 15px;
+
+                app-text-input {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
