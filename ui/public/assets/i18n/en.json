@@ -17,6 +17,12 @@
                     "placeholder": {
                         "email": "Email",
                         "password": "Password"
+                    },
+                    "submit": {
+                        "invalid": {
+                            "text": "Please check for missing or invalid fields before submitting.",
+                            "title": "Invalid input"
+                        }
                     }
                 },
                 "title": "Login"
