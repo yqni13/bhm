@@ -1,0 +1,29 @@
+@use '../../../../stylesheets/utilities' as utils;
+
+
+.bhm-footer {
+    display: flex;
+    height: var(--comp-footer-height);
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-nav-grey);
+
+    #bhm-copyright-wrapper {
+        width: fit-content;
+        flex-direction: row;
+        color: utils.$color-dark-grey;
+
+        i {
+            $size: 18px;
+            width: $size;
+            height: $size;
+        }
+
+        i,
+        #bhm-copyright-year,
+        #bhm-copyright-text {
+            margin-left: utils.$size5;
+        }
+    }
+}
