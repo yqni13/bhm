@@ -4,10 +4,12 @@
 /* NAVIGATION MODE STYLING DEFINITIONS */
 [data-nav='mobile'] {
     --comp-nav-height: 60px;
+    --comp-footer-height: 300px;
 }
 
 [data-nav='desktop'] {
     --comp-nav-height: 75px;
+    --comp-footer-height: 400px;
 }
 
 

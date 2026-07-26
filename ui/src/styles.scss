@@ -40,6 +40,10 @@ section {
     display: flex;
 }
 
+section {
+    min-height: calc(100vh - var(--comp-nav-height));
+}
+
 .btn-primary {
     display: flex;
     align-items: center;

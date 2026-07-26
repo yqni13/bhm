@@ -1,6 +1,10 @@
 {
     "components": {
-        "common": {},
+        "common": {
+            "footer": {
+                "copyright": "Alle Rechte vorbehalten."
+            }
+        },
         "pages": {
             "home": {
                 "title": "Willkommen bei: Better Home Management (BHM)"
