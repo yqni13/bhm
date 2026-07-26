@@ -2,7 +2,6 @@ import { Component, inject, OnInit, signal } from "@angular/core";
 import { NavigationService } from "../../../services/navigation.service";
 import { Route } from "@angular/router";
 import { CommonModule } from "@angular/common";
-import { default as metaData } from "../../../../../package.json";
 import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
@@ -20,7 +19,6 @@ export class FooterComponent implements OnInit {
 
     protected readonly routes = signal<Route[]>([]);
     protected year = new Date().getFullYear().toString();
-    protected version = metaData.version;
     protected app = 'BHM';
 
     ngOnInit() {
