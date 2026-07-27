@@ -3,6 +3,7 @@
 
 .bhm-footer {
     display: flex;
+    flex-direction: column;
     height: var(--comp-footer-height);
     width: 100vw;
     align-items: center;

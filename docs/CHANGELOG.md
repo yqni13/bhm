@@ -1,8 +1,15 @@
 ## 📜 $\textsf{\color{salmon}{List\ of\ updates}}$
 
+### $\textsf{\color{skyblue}2026/07/27}$
+
+$\textsf{[v0.8.0\ =>\ {\textbf{\color{brown}v0.8.1}]}}$ ui<br>
+- $\textsf{\color{teal}Addition:}$ Added settings component (basic overview).
+
+<br>
+
 ### $\textsf{\color{skyblue}2026/07/26}$
 
-$\textsf{[v0.7.0\ =>\ {\textbf{\color{brown}v0.8.0}]}}$ ui<br>
+$\textsf{[v0.7.0\ =>\ v0.8.0]}$ ui<br>
 - $\textsf{\color{teal}Addition:}$ Added footer component (basics).
 
 <br>
