@@ -1,0 +1,17 @@
+<footer class="bhm-footer">
+    @for(route of routes(); track $index) {
+        <a
+            (click)="navigation.navTo('/' + route.data?.['title'])"
+            (keydown.enter)="navigation.navTo('/' + route.data?.['title'])"
+            [tabindex]="0"
+        >{{route.data?.['title']}}</a>
+    }
+    <div id="bhm-copyright-wrapper">
+        <span id="bhm-copyright-name">{{app}}</span>
+        <i class="icon-base icon-Copyright"></i>
+        <span id="bhm-copyright-year">{{year + '.'}}</span>
+        <span id="bhm-copyright-text">
+            {{'components.common.footer.copyright' | translate}}
+        </span>
+    </div>
+</footer>

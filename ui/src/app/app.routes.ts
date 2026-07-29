@@ -9,6 +9,8 @@ import { InitComponent } from './components/pages/init/init.component';
 import { noAuthGuard } from './utils/guards/no-auth.guard';
 import { RoleOption } from './utils/enums/role.enum';
 import { roleGuard } from './utils/guards/role.guard';
+import { FooterRoute } from './utils/routes/footer.route.enum';
+import { SettingsBaseComponent } from './components/pages/settings/base/base.settings.component';
 
 export const routes: Routes = [
     {
@@ -43,6 +45,15 @@ export const routes: Routes = [
                     title: 'init',
                     location: 'navbar',
                     icon: 'icon-Init',
+                    roles: [ RoleOption.ADMIN, RoleOption.USER ]
+                }
+            },
+            {
+                path: FooterRoute.SETTINGS,
+                component: SettingsBaseComponent,
+                data: {
+                    title: 'settings',
+                    location: 'footer',
                     roles: [ RoleOption.ADMIN, RoleOption.USER ]
                 }
             }
