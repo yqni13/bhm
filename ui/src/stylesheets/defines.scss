@@ -25,6 +25,7 @@
     --theme-warning: #{utils.$color-lightmode-warning};
     --theme-primary: #{utils.$color-lightmode-primary};
     --theme-secondary: #{utils.$color-lightmode-secondary};
+    --theme-rating-passive-opacity: 0.9;
 }
 
 [data-theme='darkmode'] {
@@ -38,4 +39,5 @@
     --theme-warning: #{utils.$color-darkmode-warning};
     --theme-primary: #{utils.$color-darkmode-primary};
     --theme-secondary: #{utils.$color-darkmode-secondary};
+    --theme-rating-passive-opacity: 0.15;
 }
