@@ -1,0 +1,85 @@
+<!-- Original design inspired by: https://codepen.io/andreacrawford/pen/NvqJXW -->
+<div id="bhm-starrating">
+    <div class="bhm-starrating-wrapper">
+        <input disabled checked class="rating__input rating__input--none" name="rating" id="rating-none" value="0" type="radio">
+        <label class="rating__label" for="star1">
+            <i
+                class="icon-star icon-base rating__icon rating__icon--star"
+                [ngClass]="hasNewRating() ? 'star-active' : 'star-passive'"
+            ></i>
+        </label>
+        <input
+            class="rating__input"
+            name="rating"
+            id="star1"
+            [value]="1"
+            type="radio"
+            [checked]="checkedValue() === 1"
+            (change)="onChange($event)"
+        >
+        <label class="rating__label" for="star2">
+            <i
+                class="icon-star icon-base rating__icon rating__icon--star"
+                [ngClass]="hasNewRating() ? 'star-active' : 'star-passive'"
+            ></i>
+        </label>
+        <input
+            class="rating__input"
+            name="rating"
+            id="star2"
+            [value]="2"
+            type="radio"
+            [checked]="checkedValue() === 2"
+            (change)="onChange($event)"
+        >
+        <label class="rating__label" for="star3">
+            <i
+                class="icon-star icon-base rating__icon rating__icon--star"
+                [ngClass]="hasNewRating() ? 'star-active' : 'star-passive'"
+            ></i>
+        </label>
+        <input
+            class="rating__input"
+            name="rating"
+            id="star3"
+            [value]="3"
+            type="radio"
+            [checked]="checkedValue() === 3"
+            (change)="onChange($event)"
+        >
+        <label class="rating__label" for="star4">
+            <i
+                class="icon-star icon-base rating__icon rating__icon--star"
+                [ngClass]="hasNewRating() ? 'star-active' : 'star-passive'"
+            ></i>
+        </label>
+        <input
+            class="rating__input"
+            name="rating"
+            id="star4"
+            [value]="4"
+            type="radio"
+            [checked]="checkedValue() === 4"
+            (change)="onChange($event)"
+        >
+        <label class="rating__label" for="star5">
+            <i
+                class="icon-star icon-base rating__icon rating__icon--star"
+                [ngClass]="hasNewRating() ? 'star-active' : 'star-passive'"
+            ></i>
+        </label>
+        <input
+            class="rating__input"
+            name="rating"
+            id="star5"
+            [value]="5"
+            type="radio"
+            [checked]="checkedValue() === 5"
+            (change)="onChange($event)"
+        >
+    </div>
+    <div id="bhm-rating-value-wrapper">
+        <span id="bhm-rating-value">{{rawRating()}}</span>
+        <span id="bhm-rating-text">{{'common.component.star-rating.select' | translate}}</span>
+    </div>
+</div>

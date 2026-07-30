@@ -19,6 +19,8 @@ const envConfigFile = `import { Environment } from "./environment.model";
 export const environment: Environment = {
     ENV_MODE: '${process.env['ENV_MODE']}',
     API_BASE_URL: '${process.env['API_BASE_URL']}',
+    API_SUPPORT_URL: '${process.env['API_SUPPORT_URL']}',
+    API_SUPPORT_KEY: '${process.env['API_SUPPORT_KEY']}'
 };
 `;
 
