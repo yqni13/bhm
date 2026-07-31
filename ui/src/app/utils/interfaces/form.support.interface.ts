@@ -31,7 +31,7 @@ export interface SupportInitEditParams {
 export interface SupportFormData {
     attachment?: any[],
     userEmail: string,
-    option?: SupportOption,
+    option: SupportOption,
     title?: string,
     message?: string,
     device?: DeviceOption,
