@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { LoginComponent } from './../../../../src/app/components/pages/login/login.component';
+import { LoginComponent } from './login.component';
 import { TestBed } from '@angular/core/testing';
 import { Pipe, PipeTransform } from '@angular/core';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
-import { AuthService } from '../../../../src/app/services/auth.service';
+import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
-import { NotifyModalService } from '../../../../src/app/services/notify-modal.service';
+import { NotifyModalService } from '../../../services/notify-modal.service';
 import { CommonModule } from '@angular/common';
-import { TextInputComponent } from '../../../../src/app/components/common/form/text-input/text.input.component';
-import { BaseRoute } from '../../../../src/app/utils/routes/base.route.enum';
+import { TextInputComponent } from '../../common/form/text-input/text.input.component';
+import { BaseRoute } from '../../../utils/routes/base.route.enum';
 
 // Avoid loading full i18n dependency in unit-test.
 @Pipe({ name: 'translate', standalone: true })
