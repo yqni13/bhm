@@ -22,5 +22,4 @@ export class App {
 	constructor() {
 		this.translate.addLangs(['de', 'en'])
 	}
-
 }
