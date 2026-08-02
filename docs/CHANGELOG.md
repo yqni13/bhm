@@ -1,8 +1,15 @@
 ## 📜 $\textsf{\color{salmon}{List\ of\ updates}}$
 
+### $\textsf{\color{skyblue}2026/08/01}$
+
+$\textsf{[v0.8.1\ =>\ {\textbf{\color{brown}v0.8.2}]}}$ ui<br>
+- $\textsf{\color{teal}Addition:}$ Added first ui tests with default testing-framework 'vitest'.
+
+<br>
+
 ### $\textsf{\color{skyblue}2026/07/27}$
 
-$\textsf{[v0.8.0\ =>\ {\textbf{\color{brown}v0.8.1}]}}$ ui<br>
+$\textsf{[v0.8.0\ =>\ v0.8.1]}$ ui<br>
 - $\textsf{\color{teal}Addition:}$ Added settings component (basic overview).
 
 <br>
